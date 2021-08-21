@@ -27,6 +27,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("com.speedment.jpastreamer:jpastreamer-core:1.0.2")
+    annotationProcessor("com.speedment.jpastreamer:fieldgenerator-standard:1.0.2")
 }
 
 dependencyManagement {
