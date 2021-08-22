@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory
 
 @Configuration
 class JpaStreamerConfig {
-    
+
     @Bean
     fun jpaStreamer(entityManagerFactory: EntityManagerFactory): JPAStreamer = JPAStreamer.createJPAStreamerBuilder(entityManagerFactory).build()
 }
