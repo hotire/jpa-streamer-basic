@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
     kotlin("plugin.jpa") version "1.5.21"
+    kotlin("kapt") version "1.5.21"
 }
 
 group = "com.github.hotire"
@@ -28,7 +29,7 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("com.speedment.jpastreamer:jpastreamer-core:1.0.2")
-    annotationProcessor("com.speedment.jpastreamer:fieldgenerator-standard:1.0.2")
+    kapt("com.speedment.jpastreamer:fieldgenerator-standard:1.0.2")
 }
 
 dependencyManagement {
