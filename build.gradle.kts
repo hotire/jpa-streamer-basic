@@ -47,3 +47,10 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+sourceSets {
+    main {
+        java.srcDir("src/main/java")
+        java.srcDir("build/generated-sources/annotations")
+    }
+}
