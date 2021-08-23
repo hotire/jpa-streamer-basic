@@ -23,4 +23,8 @@ class FilmService(
     fun save(film: Film) = fileRepository.save(film)
 
     fun findAll() = filStreamer.collect(toList())
+
+    fun findByTitle(title: String) = filStreamer
+        .filter(`Film$`.title.equal(title))
+        .collect(toList())
 }
