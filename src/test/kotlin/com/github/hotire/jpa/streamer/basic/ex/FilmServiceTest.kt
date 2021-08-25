@@ -13,4 +13,10 @@ class FilmServiceTest(private val filmService: FilmService) {
         // no assert
         filmService.findAll()
     }
+
+    @Test
+    fun findByTitle() {
+        // no assert
+        filmService.findByTitle("title")
+    }
 }
