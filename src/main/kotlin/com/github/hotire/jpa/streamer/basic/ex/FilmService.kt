@@ -26,5 +26,6 @@ class FilmService(
 
     fun findByTitle(title: String) = filStreamer
         .filter(`Film$`.title.equal(title))
+        .sorted()
         .collect(toList())
 }
