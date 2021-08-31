@@ -14,11 +14,11 @@ class FilmService(
     private val filStreamer: Stream<Film>
         get() = jpaStreamer.stream(Film::class.java)
 
-    fun save(film: Film) = fileRepository.save(film)
+    fun save(film: Film): Film = fileRepository.save(film)
 
-    fun findAll() = filStreamer.collect(toList())
+    fun findAll(): MutableList<Film> = filStreamer.collect(toList())
 
-    fun findByTitle(title: String) = filStreamer
+    fun findByTitle(title: String): MutableList<Film> = filStreamer
         .filter(`Film$`.title.equal(title))
         .sorted(`Film$`.title.reversed())
         .collect(toList())
