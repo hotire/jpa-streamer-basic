@@ -29,6 +29,7 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("com.speedment.jpastreamer:jpastreamer-core:1.0.2")
+    implementation("com.speedment.jpastreamer.integration.spring:spring-boot-jpastreamer-autoconfigure:1.0.2")
     kapt("com.speedment.jpastreamer:fieldgenerator-standard:1.0.2")
 }
 
